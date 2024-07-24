@@ -1,0 +1,24 @@
+name = "directlink"
+main = "src/index.js"
+compatibility_date = "2024-01-29"
+workers_dev = false
+
+[[routes]]
+pattern = "dl.syshub.top"
+zone_name = "syshub.top"
+custom_domain = true
+
+[[routes]]
+pattern = "dl.syshub.eu.org"
+zone_name = "syshub.eu.org"
+custom_domain = true
+
+[placement]
+mode = "smart"
+
+[vars]
+_123 = "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MDc0NzQwMzksImlhdCI6MTcwNjg2OTIzOSwiaWQiOjE4MTcwNjY3MjEsIm1haWwiOiIiLCJuaWNrbmFtZSI6IjE5NzIxNjEwMTY4Iiwic3VwcGVyIjpmYWxzZSwidXNlcm5hbWUiOjE5NzIxNjEwMTY4LCJ2IjowfQ.XQmtcXywRaF36whHZus1M3-d0FPyO4ZRV6O9lXCNmWM"
+
+[[kv_namespaces]]
+id = "88a7a7153695427e9fad265cf6aa76fe"
+binding = "Cache"

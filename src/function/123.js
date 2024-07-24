@@ -81,7 +81,7 @@ async function request(token,data,sign) {
 	return atob(res).match(rule1)[1];
 }
 
-export async function getUrl(token,Key) {
+export function getUrl(token,Key) {
 	const data = getData(Key);
 	const sign = getSign();
 	return request(token,data,sign);

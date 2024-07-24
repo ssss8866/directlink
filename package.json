@@ -1,13 +1,10 @@
 {
   "name": "directlink",
-  "version": "0.0.0",
+  "version": "2.1.0",
   "private": true,
   "scripts": {
     "deploy": "wrangler deploy",
     "dev": "wrangler dev",
     "start": "wrangler dev"
-  },
-  "devDependencies": {
-    "wrangler": "^3.60.3"
   }
 }

@@ -48,7 +48,7 @@ export async function getUrl(env, Key) {
 	let timestamp = await fetch("https://www.123pan.com/b/api/get/server/time");
 	timestamp = await timestamp.json();
 	data.Timestamp = JSON.stringify(timestamp.data.timestamp);
-	data.AccessToken = env.TYY;
+	data.AccessToken = env._189;
 	const sign = await getSign(data);
 	const api = "https://api.cloud.189.cn/open/file/getFileDownloadUrl.action?dt=1&fileId=" + data.fileId + "&shareId=" + data.shareId;
 	let init = {};

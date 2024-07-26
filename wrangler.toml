@@ -19,7 +19,3 @@ mode = "smart"
 [vars]
 _123 = "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MDc0NzQwMzksImlhdCI6MTcwNjg2OTIzOSwiaWQiOjE4MTcwNjY3MjEsIm1haWwiOiIiLCJuaWNrbmFtZSI6IjE5NzIxNjEwMTY4Iiwic3VwcGVyIjpmYWxzZSwidXNlcm5hbWUiOjE5NzIxNjEwMTY4LCJ2IjowfQ.XQmtcXywRaF36whHZus1M3-d0FPyO4ZRV6O9lXCNmWM"
 TYY = "50F5760994C6E67865624D490EB54941"
-
-[[kv_namespaces]]
-id = "88a7a7153695427e9fad265cf6aa76fe"
-binding = "Cache"

@@ -53,7 +53,7 @@ async function getSign() {
 	const nowStr = now.toISOString().replace(/-/g, '').replace(/:/g, '').replace(/\..*$/, '');
 	let charStr = "";
 	for (let i = 0; i < nowStr.length; i++) {
-		charStr = charStr + table[nowStr[i].charCodeAt(0) - 48];
+		charStr += table[nowStr[i].charCodeAt(0) - 48];
 	}
 	const timeSign = crc32(charStr).toString();
 	const data = [timestamp, random, path, os, version, timeSign].join('|');

@@ -43,7 +43,7 @@ function getSign(params) {
 	return md5(signStr);
 }
 
-export async function getUrl(env, Key) {
+export async function getUrl(Key,env) {
 	let data = await getData(Key);
 	let timestamp = await fetch("https://www.123pan.com/b/api/get/server/time");
 	timestamp = await timestamp.json();

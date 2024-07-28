@@ -61,7 +61,7 @@ async function getSign() {
 	return [timeSign, [timestamp, random, dataSign].join('-')].join('=');
 }
 
-export async function getUrl(env, Key) {
+export async function getUrl(Key,env) {
 	const sign = getSign();
 	const aim = "https://www.123pan.com/b/api/share/download/info?"+sign;
 	const data = await getData(Key);

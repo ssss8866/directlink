@@ -3,14 +3,13 @@ main = "src/index.js"
 compatibility_date = "2024-01-29"
 workers_dev = false
 
+kv_namespaces = [
+  { binding = "DB", id = "2e0e227f026f470bb86e3c9cd3534cc9" }
+]
+
 [[routes]]
 pattern = "dl.syshub.top"
 zone_name = "syshub.top"
-custom_domain = true
-
-[[routes]]
-pattern = "dl.syshub.eu.org"
-zone_name = "syshub.eu.org"
 custom_domain = true
 
 [placement]

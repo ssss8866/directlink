@@ -1,3 +1,5 @@
 export async function getUrl(Key, env) {
-    return await env.DB.get(Key);
+    const rule = /\?(.*)/;
+    const key = Key.match(rule)[1];
+    return await env.DB.get(key);
 }

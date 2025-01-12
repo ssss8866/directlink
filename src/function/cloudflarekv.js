@@ -7,7 +7,7 @@ export default async function(key, env) {
 	result.key.sharekey = key.sharekey;
 	result.key.password = key.password;
 
-    url = await env.DB.get(key);
+    url = await env.KV.get(key);
     if(url) {
         result.code = 0;
         result.url = url;

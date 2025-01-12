@@ -2,18 +2,18 @@ import * as utils from './utils';
 
 export async function flashCache(env) {
 
-    const cacheKey = await env.DB.list({"prefix": "Cache/"});
+    const cacheKey = await env.KV.list({"prefix": "Cache/"});
     for(const element of cacheKey.keys) {
 
         const type = element.name.split('/')[1];
-        const encodedValue = await env.DB.get(element.name);
+        const encodedValue = await env.KV.get(element.name);
         const cacheTimestamp = Number(atob(encodedValue).split('|')[1]);
         const nowTimestamp = Number(await utils.getTimestamp());
 
         switch(type) {
-            case "123": if((nowTimestamp - cacheTimestamp) > 86400) await env.DB.delete(element.name);break;
-            case "189": if((nowTimestamp - cacheTimestamp) > 1080) await env.DB.delete(element.name);break;
-            case "lzy": if((nowTimestamp - cacheTimestamp) > 900) await env.DB.delete(element.name);break;
+            case "123": if((nowTimestamp - cacheTimestamp) > 86400) await env.KV.delete(element.name);break;
+            case "189": if((nowTimestamp - cacheTimestamp) > 1080) await env.KV.delete(element.name);break;
+            case "lzy": if((nowTimestamp - cacheTimestamp) > 900) await env.KV.delete(element.name);break;
         }
     }
 }
@@ -32,7 +32,7 @@ export async function addCache(cache, env) {
     cacheValue[1] = await utils.getTimestamp();
     const encodedValue = btoa(cacheValue.join('|'));
 
-    await env.DB.put(cacheKey, encodedValue);
+    await env.KV.put(cacheKey, encodedValue);
 }
 
 export async function getCache(type, key, env) {
@@ -46,7 +46,7 @@ export async function getCache(type, key, env) {
 
     let cache = {};
     cache.code = 400;
-    const encodedValue = await env.DB.get(cacheKey);
+    const encodedValue = await env.KV.get(cacheKey);
     if(encodedValue) {
         
         const cacheValue = atob(encodedValue).split('|');

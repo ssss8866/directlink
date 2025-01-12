@@ -8,9 +8,8 @@ kv_namespaces = [
 ]
 
 [[routes]]
-pattern = "dl.syshub.top"
+pattern = "api.syshub.top/directlink/*"
 zone_name = "syshub.top"
-custom_domain = true
 
 [placement]
 mode = "smart"

@@ -8,7 +8,7 @@ export default {
 	async fetch(request, env, _ctx) {
 
 		const url = new URL(request.url);
-		const type = url.pathname;
+		const type = url.pathname.replace(`${env.PATH_PREFIX}`, '');
 		const params = url.searchParams;
 		const down = params.get("down");
 		let cache = 1;

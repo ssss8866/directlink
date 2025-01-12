@@ -11,9 +11,6 @@ kv_namespaces = [
 pattern = "api.syshub.top/directlink/*"
 zone_name = "syshub.top"
 
-[placement]
-mode = "smart"
-
 [vars]
 PATH_PREFIX = "/directlink"
 _123 = "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MDc0NzQwMzksImlhdCI6MTcwNjg2OTIzOSwiaWQiOjE4MTcwNjY3MjEsIm1haWwiOiIiLCJuaWNrbmFtZSI6IjE5NzIxNjEwMTY4Iiwic3VwcGVyIjpmYWxzZSwidXNlcm5hbWUiOjE5NzIxNjEwMTY4LCJ2IjowfQ.XQmtcXywRaF36whHZus1M3-d0FPyO4ZRV6O9lXCNmWM"

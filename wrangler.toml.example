@@ -8,6 +8,6 @@ binding = "KV"
 id = "YOUR_KV_ID"
 
 [vars]
-# - PATH_PREFIX
-# - _123
-# - _189
+PATH_PREFIX = ""
+_123 = ""
+_189 = ""

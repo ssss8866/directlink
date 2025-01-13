@@ -3,9 +3,9 @@ main = "src/index.js"
 compatibility_date = "2024-01-29"
 workers_dev = false
 
-kv_namespaces = [
-  { binding = "KV", id = "66f231d4d11641d0bac63cfe45d837d8" }
-]
+[[kv_namespaces]]
+binding = "KV"
+id = "66f231d4d11641d0bac63cfe45d837d8"
 
 [[routes]]
 pattern = "api.syshub.top/directlink/*"

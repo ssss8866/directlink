@@ -12,7 +12,7 @@
 
 1. 创建一个新的 [Workers KV 命名空间](https://dash.cloudflare.com/?to=/:account/workers/kv/namespaces)。
 2. 创建一个新的 [Cloudflare Workers 服务](https://dash.cloudflare.com/?to=/:account/workers) 并点击 "快速编辑" 按钮。
-3. 将 [src](src) 文件夹中的内容复制到项目中（需手动创建不存在的文件和文件夹），并点击 "保存并部署"。
+3. 将 [src](src) 文件夹中的内容复制到项目中（需手动创建不存在的文件和文件夹，wrangler.toml.example需要变为wrangler.toml），并点击 "保存并部署"。
 
 ## 配置
 

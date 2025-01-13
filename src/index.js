@@ -9,7 +9,7 @@ export default {
 
 		const url = new URL(request.url);
 		let type = url.pathname;
-		if(env.PATH_PREFIX) type = type.replace(`${env.PATH_PREFIX}`, '');
+		if(env.PATH_PREFIX) type = type.replace(`\/${env.PATH_PREFIX}`, '');
 		const params = url.searchParams;
 		const down = params.get("down");
 		let cache = 1;

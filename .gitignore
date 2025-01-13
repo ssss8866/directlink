@@ -157,6 +157,8 @@ dist
 # Stores VSCode versions used for testing VSCode extensions
 
 .vscode-test
+.editorconfig
+.prettierrc
 
 # yarn v2
 
@@ -170,3 +172,4 @@ dist
 
 .dev.vars
 .wrangler/
+wrangler.toml

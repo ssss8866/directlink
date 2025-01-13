@@ -1,4 +1,4 @@
-import { getCache,flashCache } from './function/cache';
+import { getCache } from './function/cache';
 import _123 from "./function/123pan";
 import _189 from "./function/cloud189";
 import lzy from "./function/lanzou";
@@ -8,7 +8,8 @@ export default {
 	async fetch(request, env, _ctx) {
 
 		const url = new URL(request.url);
-		const type = url.pathname.replace(`${env.PATH_PREFIX}`, '');
+		let type = url.pathname;
+		if(env.PATH_PREFIX) type = type.replace(`${env.PATH_PREFIX}`, '');
 		const params = url.searchParams;
 		const down = params.get("down");
 		let cache = 1;
